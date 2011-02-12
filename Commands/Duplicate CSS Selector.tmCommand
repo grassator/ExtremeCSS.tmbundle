@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+/**
+ * Duplicate CSS Selector Command v0.3
+ * @author Dmitriy Kubyshkin (http://kubyshkin.ru)
+ */
+
+// You can customize spacing before and after duplicated selector
+$before = "\n\n";
+$after = "";
+
+// This function finds n'th occurrence of substring in a string 
+function strnpos($haystack, $needle, $nth, $offset = 0) 
+{ 
+    for ($retOffs = $offset - 1; ($nth&gt;0) &amp;&amp; ($retOffs !== false); $nth--)
+    {
+      $retOffs = strpos($haystack, $needle, $retOffs + 1);
+    }
+    return $retOffs; 
+}
+
+// Getting our document text
+$css = file_get_contents('php://stdin');
+
+// If PHP doesn't have access to environment variables we are done
+if(empty($_ENV))
+{
+  echo $css;
+  exit;
+}
+
+// Getting environment variables from TM
+$lineNumber = $_ENV['TM_LINE_NUMBER'] - 1;
+$line = $_ENV['TM_CURRENT_LINE'];
+$column = $_ENV['TM_LINE_INDEX'];
+$scope = $_ENV['TM_SCOPE'];
+
+// We need document length for reverse substring lookup
+$length = strlen($css);
+
+// Now  we need to translate 2-dimensional caret position
+// into offset inside string 
+$realOffset = strnpos($css, "\n", $lineNumber) + $column;
+
+// Getting brackets' offsets so we know where rule starts and ends
+if(strpos($scope, 'property-list') !== false)
+{
+  $openingBracketOffset = strrpos($css, '{', $realOffset - $length);
+  $closingBracketOffset = strpos($css, '}', $realOffset);
+  $previousBracketOffset = strrpos($css, '}', $openingBracketOffset - $length);
+}
+elseif(strpos($scope, 'selector') !== false)
+{
+  $openingBracketOffset = strpos($css, '{', $realOffset);
+  $closingBracketOffset = strpos($css, '}', $openingBracketOffset);
+  $previousBracketOffset = strrpos($css, '}', $realOffset - $length);
+}
+else // We don't do anything if we are outside css rule
+{
+  echo $css;
+  exit;
+}
+
+// Calculating whitespace before CSS property
+preg_match('/^\s*/', $line, $whitespace);
+$whitespace = $whitespace[0];
+
+// If we are at the end of file
+if($previousBracketOffset === false)
+{
+  $previousBracketOffset = -1;
+}
+
+// Getting rule text to copy
+$rule = substr($css, $previousBracketOffset + 1, $openingBracketOffset - $previousBracketOffset - 1);
+
+// Removing comments
+$rule = preg_replace('/[ \t]*\/\*.*\*\/[ \t]*\n?/', '', $rule);
+
+// Removing @keywords
+$rule = preg_replace('/[ \t]*@.*;[ \t]*\n?/', '', $rule);
+
+// Adding spacing before and after selector
+$rule = ltrim($rule);
+
+// Inserting it in proper position
+$css = substr_replace($css, $before . $rule . "{\n{$whitespace}\n}" . $after, $closingBracketOffset + 1, 0);
+
+// And outputting new document
+echo $css;</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>@d</string>
+	<key>name</key>
+	<string>Duplicate Selector</string>
+	<key>output</key>
+	<string>replaceDocument</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>uuid</key>
+	<string>C6203EED-D961-4BA9-AC12-3D7EBC210133</string>
+</dict>
+</plist>

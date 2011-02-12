@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>line-height: ${1:1}${2:em};$0</string>
+	<string>line-height: ${1:normal}${1/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/};$0</string>
 	<key>name</key>
-	<string>line-height: length</string>
+	<string>line-height</string>
 	<key>scope</key>
 	<string>source.css</string>
 	<key>tabTrigger</key>

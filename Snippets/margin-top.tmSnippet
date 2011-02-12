@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>margin-top: ${1:1}${2:em};$0</string>
+	<string>margin-top: ${1:0}${1/^(-?[1-9]\d*)$|.+/(?1:px)/};$0</string>
 	<key>name</key>
 	<string>margin-top</string>
 	<key>scope</key>

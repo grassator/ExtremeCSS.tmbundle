@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>height: ${1:20}${2:px};$0</string>
+	<string>height: ${1:10}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
 	<key>name</key>
 	<string>height: length</string>
 	<key>scope</key>

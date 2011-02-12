@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>text-shadow: ${1:0}${1/^(-?[1-9]\d*)$|.+/(?1:px)/} ${2:1}${2/^(-?[1-9]\d*)$|.+/(?1:px)/} ${3:1}${3/^([1-9]\d*)$|.+/(?1:px)/} ${4/(^\h{1,6}$)|.+/(?1:#)/}${4/(^\(.*$)|.+/(?1:rgb)/}${4/(^\(.*,.*,.*,.*$)|.+/(?1:a)/}${4:0}${4/(^\([^)]*$)|.+/(?1:\))/}${4/(^\h{1,2}$)|.+/(?1:$1$1)/};$0</string>
+	<key>name</key>
+	<string>text-shadow</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>ts</string>
+	<key>uuid</key>
+	<string>AF88A5FD-FCE5-4CE2-89A3-896F8F72AB34</string>
+</dict>
+</plist>

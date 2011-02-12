@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-top-width: ${1:1}${2:px};$0</string>
+	<string>border-top-width: ${1:0}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
 	<key>name</key>
 	<string>border-top-width: width</string>
 	<key>scope</key>

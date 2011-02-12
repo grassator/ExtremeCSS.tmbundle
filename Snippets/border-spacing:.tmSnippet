@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-spacing: ${1:20}${2:px};$0</string>
+	<string>-moz-border-radius: $1${1/^([1-9]\d*)$|.+/(?1:px)/};
+-webkit-border-radius: $1${1/^([1-9]\d*)$|.+/(?1:px)/};
+border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
 	<key>name</key>
-	<string>border-spacing:</string>
+	<string>border-radius: all</string>
 	<key>scope</key>
 	<string>source.css</string>
 	<key>tabTrigger</key>
-	<string>bs</string>
+	<string>bra</string>
 	<key>uuid</key>
 	<string>3F9350FF-4FA0-4564-B922-2F1540D5B6E3</string>
 </dict>

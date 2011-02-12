@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>background-position: ${1:x}${2:px} ${3:y}${4:px};$0</string>
+	<string>background-position: ${1:0}${1/^(-?[1-9]\d*)$|.+/(?1:px)/} ${2:0}${2/^(-?[1-9]\d*)$|.+/(?1:px)/};$0</string>
 	<key>name</key>
 	<string>background-position: px or %</string>
 	<key>scope</key>
