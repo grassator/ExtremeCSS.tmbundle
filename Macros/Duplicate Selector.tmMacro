@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>#!/usr/bin/env php
+&lt;?php
+/**
+ * Duplicate CSS Selector Command v0.4
+ * @author Dmitriy Kubyshkin (http://kubyshkin.ru)
+ */
+
+// This function finds n'th occurrence of substring in a string 
+function strnpos($haystack, $needle, $nth, $offset = 0) 
+{ 
+    for ($retOffs = $offset - 1; ($nth&gt;0) &amp;&amp; ($retOffs !== false); $nth--)
+    {
+      $retOffs = strpos($haystack, $needle, $retOffs + 1);
+    }
+    return $retOffs; 
+}
+
+// Getting our document text
+$css = file_get_contents('php://stdin');
+
+// If PHP doesn't have access to environment variables we are done
+if(empty($_ENV))
+{
+  exit;
+}
+
+// Getting environment variables from TM
+$lineNumber = $_ENV['TM_LINE_NUMBER'] - 1;
+$line = $_ENV['TM_CURRENT_LINE'];
+$column = $_ENV['TM_LINE_INDEX'];
+$scope = $_ENV['TM_SCOPE'];
+
+// We need document length for reverse substring lookup
+$length = strlen($css);
+
+// Now  we need to translate 2-dimensional caret position
+// into offset inside string 
+$realOffset = strnpos($css, "\n", $lineNumber) + $column;
+
+// Getting brackets' offsets so we know where rule starts and ends
+if(strpos($scope, 'property-list') !== false)
+{
+  $openingBracketOffset = strrpos($css, '{', $realOffset - $length);
+  $closingBracketOffset = strpos($css, '}', $realOffset);
+  $previousBracketOffset = strrpos($css, '}', $realOffset - $length);
+}
+else // We don't do anything if we are outside css rule
+{
+  exit;
+}
+
+// Calculating whitespace before CSS property
+preg_match('/^\s*/', $line, $whitespace);
+$whitespace = $whitespace[0];
+
+$ruleStart = "";
+
+// If we are at the beginning of file
+if($previousBracketOffset === false)
+{
+  $ruleStart = "\n\n";
+  $previousBracketOffset = -1;
+}
+
+// Getting rule text to copy
+$ruleStart .= substr($css, $previousBracketOffset + 1, $realOffset - $previousBracketOffset);
+
+// Removing comments
+$ruleStart = preg_replace('/[ \t]*\/\*.*\*\/[ \t]*\n?/', '', $ruleStart);
+
+// Removing @keywords
+$ruleStart = preg_replace('/[ \t]*@.*;[ \t]*\n?/', '', $ruleStart);
+
+
+$ruleEnd = substr($css, $realOffset + 1, $closingBracketOffset - $realOffset );
+
+echo $ruleEnd . $ruleStart;</string>
+				<key>fallbackInput</key>
+				<string>scope</string>
+				<key>input</key>
+				<string>document</string>
+				<key>keyEquivalent</key>
+				<string>@d</string>
+				<key>name</key>
+				<string>Duplicate Selector</string>
+				<key>output</key>
+				<string>afterSelectedText</string>
+				<key>scope</key>
+				<string>source.css meta.property-list.css</string>
+				<key>uuid</key>
+				<string>C6203EED-D961-4BA9-AC12-3D7EBC210133</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>commands</key>
+				<array>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>findNext</string>
+							<key>findString</key>
+							<string>}</string>
+							<key>ignoreCase</key>
+							<false/>
+							<key>regularExpression</key>
+							<false/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<false/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>findPrevious</string>
+							<key>findString</key>
+							<string>{</string>
+							<key>ignoreCase</key>
+							<false/>
+							<key>regularExpression</key>
+							<false/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<false/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>moveLeft:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>count</string>
+							<key>findString</key>
+							<string>(?m:\{[^}]*\})</string>
+							<key>ignoreCase</key>
+							<false/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<false/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replaceAndFind</string>
+							<key>findString</key>
+							<string>(?m:\{[^}]*\})</string>
+							<key>ignoreCase</key>
+							<false/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<false/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<dict>
+							<key>action</key>
+							<string>replace</string>
+							<key>findString</key>
+							<string>(?m:\{[^}]*\})</string>
+							<key>ignoreCase</key>
+							<false/>
+							<key>regularExpression</key>
+							<true/>
+							<key>replaceAllScope</key>
+							<string>document</string>
+							<key>wrapAround</key>
+							<false/>
+						</dict>
+						<key>command</key>
+						<string>findWithOptions:</string>
+					</dict>
+					<dict>
+						<key>argument</key>
+						<string>{</string>
+						<key>command</key>
+						<string>insertText:</string>
+					</dict>
+					<dict>
+						<key>command</key>
+						<string>insertNewline:</string>
+					</dict>
+				</array>
+			</dict>
+			<key>command</key>
+			<string>playMacroWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>@d</string>
+	<key>name</key>
+	<string>Duplicate Selector</string>
+	<key>scope</key>
+	<string>source.css meta.property-list.css</string>
+	<key>uuid</key>
+	<string>D816A165-45BD-451D-97E2-7A7877EA2641</string>
+</dict>
+</plist>

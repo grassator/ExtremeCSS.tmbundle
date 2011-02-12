@@ -8,13 +8,9 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 /**
- * Duplicate CSS Selector Command v0.3
+ * Duplicate CSS Selector Command v0.4
  * @author Dmitriy Kubyshkin (http://kubyshkin.ru)
  */
-
-// You can customize spacing before and after duplicated selector
-$before = "\n\n";
-$after = "";
 
 // This function finds n'th occurrence of substring in a string 
 function strnpos($haystack, $needle, $nth, $offset = 0) 
@@ -32,7 +28,6 @@ $css = file_get_contents('php://stdin');
 // If PHP doesn't have access to environment variables we are done
 if(empty($_ENV))
 {
-  echo $css;
   exit;
 }
 
@@ -54,17 +49,10 @@ if(strpos($scope, 'property-list') !== false)
 {
   $openingBracketOffset = strrpos($css, '{', $realOffset - $length);
   $closingBracketOffset = strpos($css, '}', $realOffset);
-  $previousBracketOffset = strrpos($css, '}', $openingBracketOffset - $length);
-}
-elseif(strpos($scope, 'selector') !== false)
-{
-  $openingBracketOffset = strpos($css, '{', $realOffset);
-  $closingBracketOffset = strpos($css, '}', $openingBracketOffset);
   $previousBracketOffset = strrpos($css, '}', $realOffset - $length);
 }
 else // We don't do anything if we are outside css rule
 {
-  echo $css;
   exit;
 }
 
@@ -72,39 +60,40 @@ else // We don't do anything if we are outside css rule
 preg_match('/^\s*/', $line, $whitespace);
 $whitespace = $whitespace[0];
 
-// If we are at the end of file
+$ruleStart = "";
+
+// If we are at the beginning of file
 if($previousBracketOffset === false)
 {
+  $ruleStart = "\n\n";
   $previousBracketOffset = -1;
 }
 
 // Getting rule text to copy
-$rule = substr($css, $previousBracketOffset + 1, $openingBracketOffset - $previousBracketOffset - 1);
+$ruleStart .= substr($css, $previousBracketOffset + 1, $realOffset - $previousBracketOffset);
 
 // Removing comments
-$rule = preg_replace('/[ \t]*\/\*.*\*\/[ \t]*\n?/', '', $rule);
+$ruleStart = preg_replace('/[ \t]*\/\*.*\*\/[ \t]*\n?/', '', $ruleStart);
 
 // Removing @keywords
-$rule = preg_replace('/[ \t]*@.*;[ \t]*\n?/', '', $rule);
+$ruleStart = preg_replace('/[ \t]*@.*;[ \t]*\n?/', '', $ruleStart);
 
-// Adding spacing before and after selector
-$rule = ltrim($rule);
 
-// Inserting it in proper position
-$css = substr_replace($css, $before . $rule . "{\n{$whitespace}\n}" . $after, $closingBracketOffset + 1, 0);
+$ruleEnd = substr($css, $realOffset + 1, $closingBracketOffset - $realOffset );
 
-// And outputting new document
-echo $css;</string>
+echo $ruleEnd . $ruleStart;</string>
+	<key>fallbackInput</key>
+	<string>scope</string>
 	<key>input</key>
 	<string>document</string>
 	<key>keyEquivalent</key>
-	<string>@d</string>
+	<string>^@d</string>
 	<key>name</key>
-	<string>Duplicate Selector</string>
+	<string>Duplicate Rule</string>
 	<key>output</key>
-	<string>replaceDocument</string>
+	<string>afterSelectedText</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css meta.property-list.css</string>
 	<key>uuid</key>
 	<string>C6203EED-D961-4BA9-AC12-3D7EBC210133</string>
 </dict>
