@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 /**
- * Duplicate CSS Selector Command v0.4
+ * Duplicate CSS Selector Command v0.5
  * @author Dmitriy Kubyshkin (http://kubyshkin.ru)
  */
 
@@ -56,10 +56,6 @@ else // We don't do anything if we are outside css rule
   exit;
 }
 
-// Calculating whitespace before CSS property
-preg_match('/^\s*/', $line, $whitespace);
-$whitespace = $whitespace[0];
-
 $ruleStart = "";
 
 // If we are at the beginning of file
@@ -72,11 +68,12 @@ if($previousBracketOffset === false)
 // Getting rule text to copy
 $ruleStart .= substr($css, $previousBracketOffset + 1, $realOffset - $previousBracketOffset);
 
-// Removing comments
-$ruleStart = preg_replace('/[ \t]*\/\*.*\*\/[ \t]*\n?/', '', $ruleStart);
-
 // Removing @keywords
-$ruleStart = preg_replace('/[ \t]*@.*;[ \t]*\n?/', '', $ruleStart);
+$ruleStart = preg_replace('/\s*@.*;\s*/', '', $ruleStart);
+
+// Removing comments
+$ruleStart = preg_replace('!/\*.*?\*/!s', '', $ruleStart);
+$ruleStart = preg_replace('/(\s*\n){2,}/', "\n\n", $ruleStart);
 
 
 $ruleEnd = substr($css, $realOffset + 1, $closingBracketOffset - $realOffset );
