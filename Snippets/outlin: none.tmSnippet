@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>outline-color: ${1/(^\h{1,6}$)|.+/(?1:#)/}${1/(^\(.*$)|.+/(?1:rgb)/}${1/(^\(.*,.*,.*,.*$)|.+/(?1:a)/}${1:f}${1/(^\([^)]*$)|.+/(?1:\))/}${1/(^\h{1,2}$)|.+/(?1:$1$1)/};$0</string>
+	<string>outline: none;$0</string>
 	<key>name</key>
-	<string>outline-color</string>
+	<string>outlin: none</string>
 	<key>scope</key>
 	<string>source.css</string>
 	<key>tabTrigger</key>
-	<string>oc</string>
+	<string>on</string>
 	<key>uuid</key>
-	<string>3B359485-B42B-4C51-93A5-1D3D45823770</string>
+	<string>18ECFD78-7A24-47D8-BEA3-B40C701140A4</string>
 </dict>
 </plist>
