@@ -354,7 +354,7 @@
 						</dict>
 						<dict>
 							<key>match</key>
-							<string>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc)\b|%</string>
+							<string>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc|ms)\b|%|s|m</string>
 							<key>name</key>
 							<string>keyword.other.unit.css</string>
 						</dict>
