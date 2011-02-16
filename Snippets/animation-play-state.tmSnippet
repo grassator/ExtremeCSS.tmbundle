@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>animation-play-state: ${6:running};$0</string>
+	<key>name</key>
+	<string>animation-play-state</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>aps</string>
+	<key>uuid</key>
+	<string>66364B6B-D667-427A-BF16-57ABFDC2E8F8</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>animation-duration: ${2:0.5}${2/^([1-9]\d*|\d*\.\d+)$|.+/(?1:s)/};$0</string>
+	<key>name</key>
+	<string>animation-duration</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>tabTrigger</key>
+	<string>adu</string>
+	<key>uuid</key>
+	<string>D5A65A36-A05D-4B2C-AA19-073F19D9DFFC</string>
+</dict>
+</plist>
