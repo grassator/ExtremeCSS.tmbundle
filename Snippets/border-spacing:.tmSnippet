@@ -5,7 +5,8 @@
 	<key>content</key>
 	<string>-moz-border-radius: $1${1/^([1-9]\d*)$|.+/(?1:px)/};
 -webkit-border-radius: $1${1/^([1-9]\d*)$|.+/(?1:px)/};
-border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
+border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/};
+-webkit-background-clip: padding-box;$0</string>
 	<key>name</key>
 	<string>border-radius: all</string>
 	<key>scope</key>
