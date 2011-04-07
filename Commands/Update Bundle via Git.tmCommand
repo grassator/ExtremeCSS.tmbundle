@@ -9,7 +9,7 @@
 
 echo "&lt;pre&gt;"
 [ -d ".git" ] &amp;&amp; git pull
-[ ! -d .git ] &amp;&amp; echo "You must install the bundle using Git in order to update via this command. More info: http://github.com/minimaldesign/mCSS.tmbundle"
+[ ! -d .git ] &amp;&amp; echo "You must install the bundle using Git in order to update via this command. More info: http://github.com/grassator/ExtremeCSS.tmbundle"
 
 osascript -e 'tell app "TextMate" to reload bundles'
 
