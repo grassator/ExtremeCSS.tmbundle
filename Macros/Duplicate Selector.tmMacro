@@ -171,12 +171,6 @@
 						<key>command</key>
 						<string>moveLeft:</string>
 					</dict>
-					<dict>
-						<key>argument</key>
-						<string> </string>
-						<key>command</key>
-						<string>insertText:</string>
-					</dict>
 				</array>
 			</dict>
 			<key>command</key>
