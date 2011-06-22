@@ -3,14 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-spacing: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
+	<string>@media screent, print {
+	$0
+}
+</string>
 	<key>name</key>
-	<string>border-spacing</string>
+	<string>@media screen, print</string>
 	<key>scope</key>
 	<string>source.css</string>
 	<key>tabTrigger</key>
-	<string>bsp</string>
+	<string>@msp</string>
 	<key>uuid</key>
-	<string>0C1AFB50-FEF6-422A-A675-D671A2A5FFD9</string>
+	<string>A02164A1-41F1-4284-82C4-0BF7C5EB1B36</string>
 </dict>
 </plist>
