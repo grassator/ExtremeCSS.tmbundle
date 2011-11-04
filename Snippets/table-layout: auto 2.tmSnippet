@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>table-layout: auto</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>tla</string>
 	<key>uuid</key>

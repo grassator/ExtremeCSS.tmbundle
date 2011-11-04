@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>animation-timing-function</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>atf</string>
 	<key>uuid</key>

@@ -9,7 +9,7 @@ opacity: ${1:0.5};$0</string>
 	<key>name</key>
 	<string>opacity: [for Safari, FF &amp; IE]</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>op</string>
 	<key>uuid</key>

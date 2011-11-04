@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>display: inline</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>di</string>
 	<key>uuid</key>

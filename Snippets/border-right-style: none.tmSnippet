@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>border-right-style: none</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>brsn</string>
 	<key>uuid</key>

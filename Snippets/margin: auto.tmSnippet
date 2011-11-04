@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>margin: auto</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>ma</string>
 	<key>uuid</key>

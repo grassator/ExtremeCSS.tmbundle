@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>list-style-position: inside</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>lspi</string>
 	<key>uuid</key>

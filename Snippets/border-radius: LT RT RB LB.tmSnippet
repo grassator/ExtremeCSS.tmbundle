@@ -10,7 +10,7 @@ border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:5}${2/^([1-9]\d*)$|.+/(?1
 	<key>name</key>
 	<string>border-radius: LT RT RB LB</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>bra4</string>
 	<key>uuid</key>

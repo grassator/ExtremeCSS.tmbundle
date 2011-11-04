@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>position: absolute</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>poa</string>
 	<key>uuid</key>

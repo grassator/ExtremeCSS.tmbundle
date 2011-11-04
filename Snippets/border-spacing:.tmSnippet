@@ -10,7 +10,7 @@ border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/};
 	<key>name</key>
 	<string>border-radius: all</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>bra</string>
 	<key>uuid</key>

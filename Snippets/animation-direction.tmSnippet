@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>animation-direction</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>adi</string>
 	<key>uuid</key>

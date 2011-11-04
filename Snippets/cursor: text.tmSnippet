@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>cursor: text</string>
 	<key>scope</key>
-	<string>source.css</string>
+	<string>source.css, source.scss</string>
 	<key>tabTrigger</key>
 	<string>cut</string>
 	<key>uuid</key>
