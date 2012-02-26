@@ -3,17 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@media ${1:all} {
+	<string>@media ${1:print} {
 	$0
-}
-</string>
+}</string>
 	<key>name</key>
 	<string>@media</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>@m</string>
 	<key>uuid</key>
-	<string>3D5E9827-E9E8-4888-89B4-AF041F998231</string>
+	<string>76E5BF95-0D02-474A-9135-01D7ADA7CCD7</string>
 </dict>
 </plist>

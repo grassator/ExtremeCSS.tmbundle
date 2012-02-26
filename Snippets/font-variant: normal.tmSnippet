@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>font-variant: normal;$0</string>
+	<string>font-variant: normal;</string>
 	<key>name</key>
 	<string>font-variant: normal</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>fvn</string>
 	<key>uuid</key>

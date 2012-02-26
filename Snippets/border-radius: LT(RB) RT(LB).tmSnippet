@@ -3,14 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>-moz-border-radius: $1${1/^([1-9]\d*)$|.+/(?1:px)/} $2${2/^([1-9]\d*)$|.+/(?1:px)/};
--webkit-border-radius: $1${1/^([1-9]\d*)$|.+/(?1:px)/} $2${2/^([1-9]\d*)$|.+/(?1:px)/};
-border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:5}${2/^([1-9]\d*)$|.+/(?1:px)/};
--webkit-background-clip: padding-box;$0</string>
+	<string>border-radius: ${1:5}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:5}${2/^([1-9]\d*)$|.+/(?1:px)/};</string>
 	<key>name</key>
 	<string>border-radius: LT(RB) RT(LB)</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bra2</string>
 	<key>uuid</key>

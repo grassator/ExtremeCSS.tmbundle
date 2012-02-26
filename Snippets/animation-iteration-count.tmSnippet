@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>animation-iteration-count: ${1:infinite};$0</string>
+	<string>animation-iteration-count: ${1:infinite};</string>
 	<key>name</key>
 	<string>animation-iteration-count</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>aic</string>
 	<key>uuid</key>

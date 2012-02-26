@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>animation: '${1:name}' ${2:0.5}${2/^([1-9]\d*|\d*\.\d+)$|.+/(?1:s)/} ${3:linear} ${4:0}${4/^([1-9]\d*|\d*\.\d+)$|.+/(?1:s)/} ${5:infinite} ${6:normal};$0</string>
+	<string>animation: '${1:name}' ${2:0.5}${2/^([1-9]\d*|\d*\.\d+)$|.+/(?1:s)/} ${3:linear} ${4:0}${4/^([1-9]\d*|\d*\.\d+)$|.+/(?1:s)/} ${5:infinite} ${6:normal};</string>
 	<key>name</key>
 	<string>animation</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>a</string>
 	<key>uuid</key>

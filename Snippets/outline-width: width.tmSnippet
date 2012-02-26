@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>outline-width: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
+	<string>outline-width: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/};</string>
 	<key>name</key>
 	<string>outline-width: width</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>ow</string>
+	<string>ouw</string>
 	<key>uuid</key>
 	<string>283590ED-0A5F-4D4D-A4D6-F1A07F1DEFC4</string>
 </dict>

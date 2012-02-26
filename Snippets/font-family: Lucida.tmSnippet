@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>font-family: ${1:"Lucida Grande", }${2:Lucida, }${3:Verdana, }${4:Tahoma, }sans-serif;$0</string>
+	<string>font-family: ${1:"Lucida Grande", }${2:Lucida, }${3:Verdana, }${4:Tahoma, }sans-serif;</string>
 	<key>name</key>
 	<string>font-family: Lucida</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>ff</string>
 	<key>uuid</key>

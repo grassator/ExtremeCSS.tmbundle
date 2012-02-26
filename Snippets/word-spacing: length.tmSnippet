@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>word-spacing: ${1:normal}${1/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/};$0</string>
+	<string>word-spacing: ${1:normal}${1/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/};</string>
 	<key>name</key>
 	<string>word-spacing: length</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>ws</string>
 	<key>uuid</key>

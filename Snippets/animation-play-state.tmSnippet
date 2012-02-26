@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>animation-play-state: ${6:running};$0</string>
+	<string>animation-play-state: ${6:running};</string>
 	<key>name</key>
 	<string>animation-play-state</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>aps</string>
 	<key>uuid</key>

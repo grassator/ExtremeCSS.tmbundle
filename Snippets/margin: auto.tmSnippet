@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>margin: ${1:0}${1/^(-?[1-9]\d*)$|.+/(?1:px)/} auto;$0</string>
+	<string>margin: ${1:0}${1/^(-?[1-9]\d*)$|.+/(?1:px)/} auto;</string>
 	<key>name</key>
 	<string>margin: auto</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>ma</string>
 	<key>uuid</key>

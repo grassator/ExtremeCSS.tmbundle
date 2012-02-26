@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>list-style-position: inside;$0</string>
+	<string>list-style-position: inside;</string>
 	<key>name</key>
 	<string>list-style-position: inside</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>lsp</string>
+	<string>lspi</string>
 	<key>uuid</key>
-	<string>C083D80A-DB91-401A-9D13-61F11AD93204</string>
+	<string>775E6D08-5704-4362-8867-B031D634937A</string>
 </dict>
 </plist>

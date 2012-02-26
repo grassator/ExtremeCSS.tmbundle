@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>font-size: ${1:12}${1/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
+	<string>font-size: ${1:12}${1/^([1-9]\d*)$|.+/(?1:px)/};</string>
 	<key>name</key>
 	<string>font-size</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>fs</string>
 	<key>uuid</key>

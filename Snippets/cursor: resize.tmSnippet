@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>cursor: resize;$0</string>
+	<string>cursor: resize;</string>
 	<key>name</key>
 	<string>cursor: resize</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>cur</string>
 	<key>uuid</key>

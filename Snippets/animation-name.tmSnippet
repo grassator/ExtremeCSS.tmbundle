@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>animation-name: '${1:name}';$0</string>
+	<string>animation-name: '${1:name}';</string>
 	<key>name</key>
 	<string>animation-name</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>an</string>
 	<key>uuid</key>

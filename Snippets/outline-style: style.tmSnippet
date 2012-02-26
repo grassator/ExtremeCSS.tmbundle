@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>outline-style: ${1:none/dotted/dashed/solid/double/groove/ridge/inset/outset};$0</string>
+	<string>outline-style: ${1:none/dotted/dashed/solid/double/groove/ridge/inset/outset};</string>
 	<key>name</key>
 	<string>outline-style: style</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>os</string>
+	<string>ous</string>
 	<key>uuid</key>
 	<string>AABF80BC-2CFD-4137-97FB-15ADBB7AC61B</string>
 </dict>

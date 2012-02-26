@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>direction: rtl;$0</string>
+	<string>direction: rtl;</string>
 	<key>name</key>
 	<string>direction: rtl</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>dir</string>
 	<key>uuid</key>

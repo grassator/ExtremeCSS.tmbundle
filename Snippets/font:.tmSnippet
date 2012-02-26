@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>font: ${1:1}${1/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/}/${2:1}${2/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/} ${3:Helvetica}, ${4:sans-}serif;$0</string>
+	<string>font: ${1:1}${1/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/}/${2:1}${2/^([1-9]\d*|\d*\.\d+)$|.+/(?1:em)/} ${3:Helvetica}, ${4:sans-}serif;</string>
 	<key>name</key>
 	<string>font</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>f</string>
 	<key>uuid</key>

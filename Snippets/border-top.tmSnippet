@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-top: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:solid} ${3/(^\h{1,6}$)|.+/(?1:#)/}${3/(^\(.*$)|.+/(?1:rgb)/}${3/(^\(.*,.*,.*,.*$)|.+/(?1:a)/}${3:f}${3/(^\([^)]*$)|.+/(?1:\))/}${3/(^\h{1,2}$)|.+/(?1:$1$1)/};$0</string>
+	<string>border-top: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:solid} ${3/(^[0-9a-fA-F]{1,6}$)|.+/(?1:#)/}${3/(^\(.*$)|.+/(?1:rgb)/}${3/(^\(.*,.*,.*,.*$)|.+/(?1:a)/}${3:f}${3/(^\([^)]*$)|.+/(?1:\))/}${3/(^[0-9a-fA-F]{1,2}$)|.+/(?1:$1$1)/};</string>
 	<key>name</key>
 	<string>border-top</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bt</string>
 	<key>uuid</key>

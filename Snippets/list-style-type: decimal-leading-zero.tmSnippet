@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>list-style-type: decimal-leading-zero;$0</string>
+	<string>list-style-type: decimal-leading-zero;</string>
 	<key>name</key>
 	<string>list-style-type: decimal-leading-zero</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>lst</string>
 	<key>uuid</key>

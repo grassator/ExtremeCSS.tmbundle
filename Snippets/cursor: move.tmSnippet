@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>cursor: move;$0</string>
+	<string>cursor: move;</string>
 	<key>name</key>
 	<string>cursor: move</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>cum</string>
 	<key>uuid</key>

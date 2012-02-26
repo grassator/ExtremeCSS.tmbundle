@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-width: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:1}${2/^([1-9]\d*)$|.+/(?1:px)/};$0</string>
+	<string>border-width: ${1:1}${1/^([1-9]\d*)$|.+/(?1:px)/} ${2:1}${2/^([1-9]\d*)$|.+/(?1:px)/};</string>
 	<key>name</key>
 	<string>border-width: V H</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bw2</string>
 	<key>uuid</key>

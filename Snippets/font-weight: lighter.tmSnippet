@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>font-weight: lighter;$0</string>
+	<string>font-weight: lighter;</string>
 	<key>name</key>
 	<string>font-weight: lighter</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>fwl</string>
 	<key>uuid</key>

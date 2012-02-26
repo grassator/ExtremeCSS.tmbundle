@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>list-style-image: url($1);$0</string>
+	<string>list-style-image: url($1);</string>
 	<key>name</key>
 	<string>list-style-image: url</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>lsi</string>
 	<key>uuid</key>
