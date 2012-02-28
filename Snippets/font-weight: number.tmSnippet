@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>font-weight: ${1:4}00;</string>
+	<string>font-weight: ${1:4}${1/^([1-9])$|.+/00/};</string>
 	<key>name</key>
 	<string>font-weight: number</string>
 	<key>scope</key>
 	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>fwn</string>
+	<string>fw</string>
 	<key>uuid</key>
 	<string>023F7B8A-D2BE-4516-A8F2-7452349BA08A</string>
 </dict>
