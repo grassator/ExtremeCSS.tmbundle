@@ -11,8 +11,6 @@
 	<string>scope</string>
 	<key>input</key>
 	<string>document</string>
-	<key>keyEquivalent</key>
-	<string>^@d</string>
 	<key>name</key>
 	<string>Duplicate Rule</string>
 	<key>output</key>
