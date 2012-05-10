@@ -3,10 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>filter:alpha(opacity=${2:${1/(1?)0?\.(.*)/$1$2/}${1/^\d*\.\d\d+$|^\d*$|(^\d\.\d$)/(?1:0)/}});
-opacity: ${1:0.5};</string>
+	<string>opacity: ${1:0.5};</string>
 	<key>name</key>
-	<string>opacity: [for Safari, FF &amp; IE]</string>
+	<string>opacity</string>
 	<key>scope</key>
 	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>

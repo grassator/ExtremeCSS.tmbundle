@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>min-width: ${1:10}${1/^([1-9]\d*)$|.+/(?1:px)/};</string>
+	<string>box-sizing: border-box;</string>
 	<key>name</key>
-	<string>min-width: length</string>
+	<string>box-sizing: border-box</string>
 	<key>scope</key>
 	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>miw</string>
+	<string>bszb</string>
 	<key>uuid</key>
-	<string>C0251CB3-BC70-4448-8CF5-B5A11707408D</string>
+	<string>F29A5E57-9917-453E-81C2-D7F6E0FF6E31</string>
 </dict>
 </plist>

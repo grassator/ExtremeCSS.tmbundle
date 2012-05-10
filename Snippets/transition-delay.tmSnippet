@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>min-width: ${1:10}${1/^([1-9]\d*)$|.+/(?1:px)/};</string>
+	<string>transition-delay: ${1:0}${1/^([1-9]\d*|\d*\.\d+m?)$|.+/(?1:s)/}};</string>
 	<key>name</key>
-	<string>min-width: length</string>
+	<string>transition-delay</string>
 	<key>scope</key>
 	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>miw</string>
+	<string>trde</string>
 	<key>uuid</key>
-	<string>C0251CB3-BC70-4448-8CF5-B5A11707408D</string>
+	<string>53FC5448-37C6-462D-A9F1-5E800F49E84B</string>
 </dict>
 </plist>
