@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>background-image: url('$1');</string>
+	<string>background-image: url('${1:../images/}');</string>
 	<key>name</key>
 	<string>background-image: url</string>
 	<key>scope</key>

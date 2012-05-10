@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>background-position: ${1:0}${1/^(-?[1-9]\d*)$|.+/(?1:px)/}${1/^(.+)$/(?1: )/}${2:0}${2/^(-?[1-9]\d*)$|.+/(?1:px)/};</string>
+	<string>background-repeat: ${1/(x|y)$|.+/(?1:repeat-)/}${1:n}${1/^(n)$|.+/(?1:o-repeat)/}${1/(r)$|.+/(?1:epeat)/};</string>
 	<key>name</key>
-	<string>background-position: px or %</string>
+	<string>background-repeat</string>
 	<key>scope</key>
 	<string>source.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
-	<string>bgp</string>
+	<string>bgr</string>
 	<key>uuid</key>
-	<string>794DC569-A3FC-4E90-8987-1BCC66DAC7D5</string>
+	<string>9282414D-6446-4D66-A0EB-AA91AC6C202D</string>
 </dict>
 </plist>
