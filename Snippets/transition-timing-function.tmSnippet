@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>transition-timing-function</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>trt</string>
 	<key>uuid</key>

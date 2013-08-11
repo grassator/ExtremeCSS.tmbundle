@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>list-style-type: circle</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>lst</string>
 	<key>uuid</key>

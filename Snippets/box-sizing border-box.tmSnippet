@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>box-sizing: border-box</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bszb</string>
 	<key>uuid</key>

@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>letter-spacing</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>les</string>
 	<key>uuid</key>

@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>box-sizing: content-box</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bszc</string>
 	<key>uuid</key>

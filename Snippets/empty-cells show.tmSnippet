@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>empty-cells: show</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>ecs</string>
 	<key>uuid</key>

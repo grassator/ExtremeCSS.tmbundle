@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>text-transform: lower</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>ttl</string>
 	<key>uuid</key>

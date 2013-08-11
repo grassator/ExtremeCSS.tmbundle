@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>text-shadow: none</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>tsn</string>
 	<key>uuid</key>

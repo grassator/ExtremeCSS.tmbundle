@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>box-shadow: 2</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bsha2</string>
 	<key>uuid</key>

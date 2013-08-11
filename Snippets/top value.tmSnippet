@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>top</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>t</string>
 	<key>uuid</key>

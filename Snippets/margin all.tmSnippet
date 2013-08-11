@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>margin: all</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>m</string>
 	<key>uuid</key>

@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>border-collapse: collapse</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>bcc</string>
 	<key>uuid</key>

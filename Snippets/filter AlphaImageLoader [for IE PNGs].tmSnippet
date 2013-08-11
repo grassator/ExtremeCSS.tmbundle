@@ -8,7 +8,7 @@
 	<key>name</key>
 	<string>filter: AlphaImageLoader</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.stylus</string>
+	<string>meta.property-list.css, source.scss, source.stylus</string>
 	<key>tabTrigger</key>
 	<string>iepng</string>
 	<key>uuid</key>
