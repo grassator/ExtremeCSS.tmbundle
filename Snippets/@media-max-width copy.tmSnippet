@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@media ${1:screen} and (max-width: ${2:960}${2/^([1-9]\d*)$|(\d*\.\d+)$|.+/(?1:px)(?2:em)/};) {
+	<string>@media ${1:screen} and (max-width: ${2:960}${2/^([1-9]\d*)$|(\d*\.\d+)$|.+/(?1:px)(?2:em)/}) {
 	$0
 }</string>
 	<key>name</key>
