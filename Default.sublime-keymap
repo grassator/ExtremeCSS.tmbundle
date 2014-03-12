@@ -8,6 +8,15 @@
       { "key": "selector", "operator": "equal", "operand": "meta.property-list.css" }
     ]
   },
+  
+  {
+    "keys": ["ctrl+shift+d"],
+    "command": "run_macro_file",
+    "args": {"file": "Packages/ExtremeCSS/Duplicate Selector.sublime-macro"},
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "source.stylus" }
+    ]
+  },
 
   // This customization for auto-pairing is necessary to make
   // (s)css/stylus color snippets work like expected
